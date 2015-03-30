@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  ordet_status: MyString
+  pst_rate: 9.99
+  gst_rate: 9.99
+  hst_rate: 9.99
+  fill_date: 2015-03-30
+  ship_date: 2015-03-30
+
+two:
+  customer_id: 1
+  ordet_status: MyString
+  pst_rate: 9.99
+  gst_rate: 9.99
+  hst_rate: 9.99
+  fill_date: 2015-03-30
+  ship_date: 2015-03-30
