@@ -2,7 +2,11 @@
   <h2><%= link_to product.product_name, product %></h2>
   
   <p><strong>Price:</strong> <%= number_to_currency product.price %></p>
-  
+
+  <% if product.image.present? %>
+  	<p><%= image_tag product.image.medium.url %></p>
+  <% end %>
   <div><%= product.description %></div>
+
   
 </div>

@@ -12,7 +12,8 @@ ActiveAdmin.register Product do
         f.input :price_status, :as => :radio,
                 :collection => ["regular", "onsale", "discount"]
         f.input :inventory_status, :as => :radio,
-                :collection => ["new", "instock", "discontinued"]       
+                :collection => ["new", "instock", "discontinued"]
+        f.input :image
       end
       f.actions
     end
@@ -25,6 +26,6 @@ ActiveAdmin.register Product do
     @products = Product.all
   end
   
-  permit_params :category_id, :product_name, :description, :price, :sale_price,  :discount_rate, :stock_quantity, :price_status, :inventory_status
+  permit_params :category_id, :product_name, :description, :price, :sale_price,  :discount_rate, :stock_quantity, :price_status, :inventory_status, :image
 
 end
