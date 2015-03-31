@@ -1,8 +1,175 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  margin: 0;
+}
+
+html{
+  min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(to bottom, #3d3d3d 0%,#c9c9c9 100%);
+}
 
 #wrapper {
-	width: 800px;
+  min-height:100%;
+	width: 900px;
 	margin: 0 auto;
+	background: #666;
+
+	header {
+		background: #000;
+		
+		#banner {
+			margin-left: 20px;
+		}
+
+		#sitenav {
+			zoom: 1;
+			width: auto;
+			background-color: #000;
+
+			nav {
+				padding: 5px 0px;
+        background: #000;
+        text-align: center;
+				
+				ul {
+					list-style-type: none;
+					display: block;
+					font-size: 12px;
+					font-family: Verdana, Helvetica, Arial, sans-serif;
+					margin: 0;
+					padding: 0;
+					border-bottom: 1px solid #00F;
+					zoom: 1;
+
+          li {
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+
+            a {
+              transition:0.5s;
+              width: 80px;
+              float: left;
+              color: #A79787;
+              text-decoration: none;
+              height: 24px;
+              padding: 9px 15px 0;
+              font-weight: normal;
+            }
+          }
+          li:hover{
+            text-decoration: none;
+            border-bottom: 2px solid #00F;
+          }
+          li:hover a {
+            color: #fff;
+          }
+				}
+        ul:before {
+          content: "";
+          display: block;
+        }
+        ul:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+			}
+		}
+		#sitenav:before {
+			content: "";
+			display: block;
+		}
+		#sitenav:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+}
+
+div.product {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  height: 350px;
+  width: 275px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  margin: 10px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%);
+  background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%);
+  
+  img {
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .product_title {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  h3 {
+    margin: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #desc {
+    position: absolute;
+    float: left;
+    margin-right: 530px;
+    margin-left: 300px;
+    margin-top: -300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px;
+    padding: 15px;
+    background-color: #FFF;
+  }
+}
+
+.saleprice {
+  color: red;
+  font-weight: bold;
+}
+
+.regularprice {
+  font-weight: bold;
 }

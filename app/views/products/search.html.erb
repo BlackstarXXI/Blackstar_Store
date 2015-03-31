@@ -1,0 +1,6 @@
+<% flash.each do |flash| %>
+  <h3 class="searchresults"><%= flash[1] %></h3>
+<% end %>
+<%= render :partial => "products", :object => @products %>
+
+

@@ -1,0 +1,15 @@
+<section id="product_layout">
+  <% @products.each do |p| %>
+  <div class="product">
+    <h2 class="product_title"><%= link_to p.product_name, product_path(p) %></h2>
+    <a href="<%= product_path(p)%>"><%= image_tag p.image.medium.url %></a>      
+    <h3>Price:
+    <%if p.price_status == "onsale" then %>
+      <span class="saleprice"><%= number_to_currency(p.sale_price) %> <br>SALE</span>
+    <%else%>
+      <span class="regularprice"><%= number_to_currency(p.price) %></span>
+    <%end%>      
+    </h3>      
+  </div>
+  <% end %>
+</section>

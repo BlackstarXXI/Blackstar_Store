@@ -27,6 +27,7 @@
   <% if product.image.present? %>
   	<p><%= image_tag product.image.medium.url %></p>
   <% end %>
-  <p><%= product.description %></p>
-  
+  <div id="desc">
+    <p><%= product.description %></p>
+  </div>
 </div>

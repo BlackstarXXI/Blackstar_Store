@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
     @products = Product.where('price_status = "onsale"').page(params[:page]).per(4)
   end
 
-    def priceasc
+  def priceasc
     
     category = session[:current_category].to_i
     
@@ -91,7 +91,7 @@ class ProductsController < ApplicationController
     
   end
   
-    def namedesc
+  def namedesc
     
     category = session[:current_category].to_i
     
