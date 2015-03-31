@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlackstarStore</title>
+  <title>Blackstar Store</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
+    <header>
+      <div>
+        <div id="banner">
+          <%= render partial: "shared/header" %>
+        </div>
+        <div class="clear"></div>
+        <div id="sitenav">
+          <%= render partial: "shared/sitenav" %>
+        </div>
+    </header>
 
-<%= yield %>
+    <%= yield %>
 
+  </div>
 </body>
 </html>

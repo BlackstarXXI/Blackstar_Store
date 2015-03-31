@@ -1,12 +1,32 @@
 <div class="product">
+  <div id="info">
   <h2><%= link_to product.product_name, product %></h2>
   
-  <p><strong>Price:</strong> <%= number_to_currency product.price %></p>
+  <h4>
+    <span class="bold">Price:</span>
+    <%if product.price_status == "onsale" then %>
+      <span class="strike"><%= number_to_currency(product.price) %></span> <span class="saleprice"><%= number_to_currency(product.sale_price) %></span>
+    <%elsif product.price_status == "regular" then%>
+      <span class="regularprice"><%= number_to_currency(product.price) %></span>
+    <%end%>
+  </h4>
+  <h4>
+    <span class="bold">Status:</span>
+    <% if product.inventory_status == "instock" then %>
+      In Stock
+    <% elsif product.inventory_status == "new" then %>
+      New Item
+    <% elsif product.inventory_status == "discontinued" then %>
+      Discontinued
+    <% end %>
+  </h4>
+  
+  </div>
+
 
   <% if product.image.present? %>
   	<p><%= image_tag product.image.medium.url %></p>
   <% end %>
-  <div><%= product.description %></div>
-
+  <p><%= product.description %></p>
   
 </div>
