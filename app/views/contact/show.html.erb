@@ -1,0 +1,52 @@
+<section id="contact">
+  <div id="contactinfo">
+    <h3>Contact Us</h3>
+    <ul>
+      <li><%= @contact.name %></li>
+      <li><%= @contact.telephone %></li>
+      <li><%= @contact.email %></li>
+      <li><%= @contact.street_address %></li>
+      <li><%= @contact.city %>, <%= @contact.province%></li>
+      <li><%= @contact.postal_code %></li>
+    </ul>
+  </div>
+  <div id="hoursinfo">  
+  <h3>Store Hours</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>Weekday</td>
+        <td>Hours</td>
+      </tr>
+    </thead>
+    <tr>
+      <td>Sunday:</td>
+      <td><%= @contact.sunday %></td>
+    </tr>
+    <tr>
+      <td>Monday:</td>
+      <td><%= @contact.monday %></td>
+    </tr>
+    <tr>
+      <td>Tuesday:</td>
+      <td><%= @contact.tuesday %></td>
+    </tr>
+    <tr>
+      <td>Wednesday:</td>
+      <td><%= @contact.wednesday %></td>
+    </tr>
+    <tr>
+      <td>Thursday:</td>
+      <td><%= @contact.thursday %></td>
+    </tr>
+    <tr>
+      <td>Friday:</td>
+      <td><%= @contact.friday %></td>
+    </tr>
+    <tr>
+      <td>Saturday:</td>
+      <td><%= @contact.saturday %></td>
+    </tr>
+  </table>
+  </div>
+</section>
