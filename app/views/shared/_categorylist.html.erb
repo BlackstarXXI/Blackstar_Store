@@ -1,0 +1,9 @@
+<div>
+  <nav>
+    <ul>
+      <% @ctgy.each do |c| %>
+      <li><%= link_to c.name, by_category_path(c) %></li>
+      <%end%>
+    </ul>
+  </nav>
+</div>

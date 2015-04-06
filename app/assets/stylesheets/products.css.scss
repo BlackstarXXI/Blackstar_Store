@@ -166,6 +166,116 @@ div.product {
   }
 }
 
+#about {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  padding: 15px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                    hsl(0,0%,90%) 47%, 
+                    hsl(0,0%,78%) 53%,
+                    hsl(0,0%,70%)100%);
+                  background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                    -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                    -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                    hsl(0,0%,90%) 47%, 
+                    hsl(0,0%,78%) 53%,
+                    hsl(0,0%,70%)100%);
+}
+
+#contact {
+  margin: 20px 150px;
+   
+  #contactinfo {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px;
+    padding: 15px;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                      hsl(0,0%,90%) 47%, 
+                      hsl(0,0%,78%) 53%,
+                      hsl(0,0%,70%)100%);
+                    background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                      -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                      -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                      hsl(0,0%,90%) 47%, 
+                      hsl(0,0%,78%) 53%,
+                      hsl(0,0%,70%)100%);
+
+    ul {
+      li {
+        list-style-type: none;
+        margin-left: -35px;
+        margin-top: 10px;
+      }
+    }
+  }
+    
+  #hoursinfo {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px;
+    padding: 15px;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                      -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                      hsl(0,0%,90%) 47%, 
+                      hsl(0,0%,78%) 53%,
+                      hsl(0,0%,70%)100%);
+                    background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+                      -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+                      -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+                      hsl(0,0%,90%) 47%, 
+                      hsl(0,0%,78%) 53%,
+                      hsl(0,0%,70%)100%);
+
+    h3 {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    table {
+      border: 1px solid #000;
+
+      thead {
+        border: 1px solid #000;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      tbody {
+
+        td {
+          border: 1px solid #000;
+          width: 150px;
+        }
+
+        td:nth-of-type(odd) {
+          width: 100px;
+          text-align: right;
+          padding-right: 15px;
+        } 
+      }
+    }
+  }
+}
 .saleprice {
   color: red;
   font-weight: bold;
