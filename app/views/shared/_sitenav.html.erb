@@ -1,6 +1,12 @@
 <nav>
   <ul>
     <li><%= link_to "Home", root_path %></li>
+    <li><a>Category</a></li>
+        <ul class="nav_child">
+            <li><%= link_to "Movie Series", category_path(1) %></li>
+            <li><%= link_to "T.V. Series", category_path(2) %></li>
+            <li><%= link_to "Manga", category_path(3) %></li>
+        </ul>
     <li><%= link_to "About us", about_show_path  %></li>
     <li><%= link_to "Contact", contact_show_path %></li>
   </ul>

@@ -1,6 +1,15 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$metal-color: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%);
+
 *{
   margin: 0;
 }
@@ -46,6 +55,7 @@ body {
 					padding: 0;
 					border-bottom: 1px solid #00F;
 					zoom: 1;
+          position: relative;
 
           li {
             display: block;
@@ -68,9 +78,39 @@ body {
           li:hover{
             text-decoration: none;
             border-bottom: 2px solid #00F;
+
+            > ul {
+              visibility: visible;
+            }
           }
           li:hover a {
             color: #fff;
+          }
+          ul {
+            visibility: hidden;
+            position: absolute;
+            background: #000;
+            padding: 0;
+            left: 110px;
+            top: 100%;
+            transition: margin .15s, opacity .15s;
+
+            li {
+              float: none; 
+              position: relative;
+              margin: 0;
+
+              a {
+                padding: 15px 40px;
+                color: #A79787;
+                height: 10px;
+                padding: 12px 15px;
+              }
+            }
+            li:hover a {
+              color: #fff;
+              background-color: #00F;
+            }
           }
 				}
         ul:before {
@@ -82,6 +122,7 @@ body {
           display: table;
           clear: both;
         }
+
 			}
 		}
 		#sitenav:before {
@@ -106,20 +147,7 @@ div.product {
   border-radius: 5px;
   box-shadow: 5px 5px 2px;
   margin: 10px;
-  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-    hsl(0,0%,90%) 47%, 
-    hsl(0,0%,78%) 53%,
-    hsl(0,0%,70%)100%);
-  background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-    -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-    -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-    hsl(0,0%,90%) 47%, 
-    hsl(0,0%,78%) 53%,
-    hsl(0,0%,70%)100%);
+  background-image: $metal-color;
   
   img {
     margin-top: 8px;
@@ -172,20 +200,7 @@ div.product {
   border-radius: 5px;
   box-shadow: 5px 5px 2px;
   padding: 15px;
-  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                    hsl(0,0%,90%) 47%, 
-                    hsl(0,0%,78%) 53%,
-                    hsl(0,0%,70%)100%);
-                  background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                    -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                    -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                    hsl(0,0%,90%) 47%, 
-                    hsl(0,0%,78%) 53%,
-                    hsl(0,0%,70%)100%);
+  background-image: $metal-color;
 }
 
 #contact {
@@ -199,20 +214,8 @@ div.product {
     border-radius: 5px;
     box-shadow: 5px 5px 2px;
     padding: 15px;
-    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                      -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                      -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                      hsl(0,0%,90%) 47%, 
-                      hsl(0,0%,78%) 53%,
-                      hsl(0,0%,70%)100%);
-                    background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                      -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                      -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                      hsl(0,0%,90%) 47%, 
-                      hsl(0,0%,78%) 53%,
-                      hsl(0,0%,70%)100%);
+    background-image: $metal-color;
+
 
     ul {
       li {
@@ -231,20 +234,7 @@ div.product {
     border-radius: 5px;
     box-shadow: 5px 5px 2px;
     padding: 15px;
-    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                      -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                      -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                      hsl(0,0%,90%) 47%, 
-                      hsl(0,0%,78%) 53%,
-                      hsl(0,0%,70%)100%);
-                    background-image: -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-                      -moz-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-                      -moz-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-                      linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-                      hsl(0,0%,90%) 47%, 
-                      hsl(0,0%,78%) 53%,
-                      hsl(0,0%,70%)100%);
+    background-image: $metal-color;
 
     h3 {
       font-weight: bold;
