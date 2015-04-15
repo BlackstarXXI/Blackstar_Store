@@ -15,38 +15,6 @@ ActiveAdmin.register Customer do
   end
     f.actions
   end
-  
-  show do |order|
-    
-    div do
-      panel("Customer Information") do
-        table_for(customer) do
-          column :id
-          column :first_name
-          column :last_name
-          column :street_address
-          column :box_no
-          column :postal_code
-          column :phone_number
-          column :email
-        end
-      end
-      panel("Pending Orders") do
-        table_for(customer.orders) do
-          column :id
-          column :order_status
-          column "Grand Total" do |o|
-            number_to_currency(o.grand_total)
-          end
-          column :pst_rate
-          column :gst_rate
-          column :hst_rate
-          column :fill_date
-          column :ship_date
-        end
-      end
-    end
-  end
     
   
   def create
