@@ -204,6 +204,15 @@ div.product {
   }
 }
 
+#searchresult {
+  text-align: center;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  padding: 15px;
+  background-image: $metal-color;
+}
 
 #categoryresult {
   margin: 20px;
@@ -213,6 +222,17 @@ div.product {
   padding: 15px;
   background-image: $metal-color;
 
+  ul {
+    li {
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        color: #00F;
+      }
+    }
+  }
 }
 
 #about {

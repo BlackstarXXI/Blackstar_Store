@@ -1,8 +1,11 @@
+<div id="searchresult">
 <h2>Search Results</h2>
 
 <% if @products.size.zero? %>
   <p>No Products Were Found.<p>
+  </div>
   <% else %>
     <p><%= pluralize(@products.size, 'Product') %> Found.</p>
+	</div>
     <%= render @products %>
 <% end %>
