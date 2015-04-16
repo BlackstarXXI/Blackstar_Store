@@ -113,23 +113,9 @@ class ProductsController < ApplicationController
     
   end
 
-  def search
-    @products = nil
-    
-    if params[:category_id] == '' then
-      @products = Product.where("product_name LIKE ? OR vendor_name LIKE ? OR short_desc LIKE ?",
-                              "%#{params[:keywords]}%", "%#{params[:keywords]}%", "%#{params[:keywords]}%").page(params[:page]).per(4)
-    else    
-      @products = Product.where("product_name LIKE ? OR vendor_name LIKE ? OR short_desc LIKE ? AND category_id = ?",
-                              "%#{params[:keywords]}%", "%#{params[:keywords]}%", "%#{params[:keywords]}%", "#{params[:category_id]}" ).page(params[:page]).per(4)
-    end
-    
-    if @products.length == 0
-      flash[:results] = "No results found for search: '#{params[:keywords]}'!"
-    else
-      flash[:results] = "Showing results matching: '#{params[:keywords]}'"
-    end
-
+  def search_results
+    wildcard_keywords = '%' + params[:search_keywords] + '%'
+    @products = Product.where("product_name LIKE ?", wildcard_keywords)
   end
 
   protected

@@ -73,7 +73,7 @@ body {
             border-bottom:2px solid;
 
             a {
-              transition:0.5s;
+              transition:0.1s;
               width: 80px;
               float: left;
               color: #A79787;
@@ -90,7 +90,6 @@ body {
               padding: 0;
               left: 110px;
               top: 100%;
-              transition: margin .1s, opacity .15s;
 
               li {
                 float: none; 
@@ -203,6 +202,17 @@ div.product {
     padding: 15px;
     background-color: #FFF;
   }
+}
+
+
+#categoryresult {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  padding: 15px;
+  background-image: $metal-color;
+
 }
 
 #about {
