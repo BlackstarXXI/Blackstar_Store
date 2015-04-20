@@ -42,6 +42,30 @@ body {
         margin-bottom: 0px;
         padding: 0px;
       }
+
+      #cart {
+        float: right;
+        margin-right: 25px;
+        margin-top: -70px;
+        margin-bottom: 0px;
+        padding: 0px;
+
+        p {
+          color: #A79787;
+          float: left;
+          margin-right: 2px;
+        }
+        p:hover {
+          color: #FFF;
+        }
+        div{
+          float: right;
+          margin-top: -1px;
+          form {
+            float: left;
+          }
+        }
+      }
 		}
 
 		#sitenav {

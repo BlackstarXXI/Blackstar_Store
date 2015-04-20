@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'price_desc', to: 'products#pricedesc', as:'by_price_desc'
   get 'name_asc', to: 'products#nameasc', as:'by_name_asc'
   get 'name_desc', to: 'products#namedesc', as:'by_name_desc'
+  post 'cart', to: 'cart#clear', as: 'clear'
+  get 'items', to: 'cart#items', as: 'cart'
+  post 'product/:id', to: 'cart#add', as: 'add'
 
   
   get 'products' => 'products#index'

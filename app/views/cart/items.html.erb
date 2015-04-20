@@ -1,0 +1,45 @@
+<section id="cartitems">
+<h2>Your Shopping Cart</h2>
+
+<% if @cart_items == 0 then %>
+  <p>You have no items in your cart!<p>
+  
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+        <td><h4>Quantity:</h4></td>
+        <td><h4>Price:</h4></td>
+        <td><h4>Product:</h4></td>
+        <td><h4>Description:</h4></td>
+      </tr>
+    </thead>
+    <% @cart_items.each_with_index do |p, i| %>
+      <tr class="cartitem">
+        <td><%= image_tag p.image.url(:thumb) %></td>
+        <td><p class="center"><%= session[:quantities][i] %></p></td>
+        <td>        
+        <% if p.price_status == "onsale" then %>
+          <p><span class="saleprice"><%= number_to_currency(p.sale_price) %></span></p></td>
+        <% else %>
+          <p><%= number_to_currency(p.price) %></p>
+        <% end %></td>       
+        <td><p><%= p.vendor_name %> <%= p.product_name %></p></td>
+        <td><p><%= p.short_desc %> </p></td>        
+      </tr>
+    <%end%>
+  </table>
+  <div id="cart_footer">
+    <div>
+      <h3>Subtotal: <%= number_to_currency(@sub_total) %></h3>
+    </div>
+  
+    <div id="btn_checkout">
+      <%= button_to "Checkout", new_customer_path, :method => 'get', class: "btn btn-default btn-sm" %>
+    </div>
+  
+  </div>
+    
+<%end %>
+</section>

@@ -7,3 +7,10 @@
         <%= submit_tag 'Search' %>
     <% end %>
 </div>
+<div id="cart">
+  <p>Cart(<%= pluralize @item_count, 'item' %>)
+  <div>
+    <%= button_to "View Cart", cart_path, :method => 'get', class: "btn btn-default btn-xs" %>
+    <%= button_to "Clear Cart", clear_path, class: "btn btn-default btn-xs" %>
+  </div></p>
+</div>
