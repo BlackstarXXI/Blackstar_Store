@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'price_asc', to: 'products#priceasc', as:'by_price_asc'
   get 'price_desc', to: 'products#pricedesc', as:'by_price_desc'
   get 'name_asc', to: 'products#nameasc', as:'by_name_asc'
-  get 'name_desc', to: 'product#namedesc', as:'by_name_desc'
+  get 'name_desc', to: 'products#namedesc', as:'by_name_desc'
 
   
   get 'products' => 'products#index'

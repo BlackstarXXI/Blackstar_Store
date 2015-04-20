@@ -36,25 +36,7 @@ class ProductsController < ApplicationController
   end
   
   def namedesc
-    
-    category = session[:current_category].to_i
-    
-    if category == 0
-      @products = Product.order(product_name: :desc).page(params[:page]).per(4)
-    end
-    
-    if category == -1 
-      @products = Product.where('inventory_status = "new"').order(product_name: :desc ).page(params[:page]).per(4)
-    end
-    
-    if category == -2
-      @products = Product.where('price_status = "onsale"').order(product_name: :desc).page(params[:page]).per(4)
-    end
-    
-    if category > 0
-      @products = Product.where('category_id = ?', category).order(product_name: :desc).page(params[:page]).per(4)
-    end    
-    
+    @products = Product.order(product_name: :desc).all
   end
 
   def search_results
