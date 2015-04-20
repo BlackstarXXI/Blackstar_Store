@@ -31,26 +31,8 @@ class ProductsController < ApplicationController
     @products = Product.order(price: :desc ).all
   end
   
-  def nameasc
-    
-    category = session[:current_category].to_i
-    
-    if category == 0
-      @products = Product.order(product_name: :asc).page(params[:page]).per(4)
-    end
-    
-    if category == -1 
-      @products = Product.where('inventory_status = "new"').order(product_name: :asc ).page(params[:page]).per(4)
-    end
-    
-    if category == -2
-      @products = Product.where('price_status = "onsale"').order(product_name: :asc).page(params[:page]).per(4)
-    end
-    
-    if category > 0
-      @products = Product.where('category_id = ?', category).order(product_name: :asc).page(params[:page]).per(4)
-    end    
-    
+  def nameasc 
+    @products = Product.order(product_name: :asc).all
   end
   
   def namedesc
