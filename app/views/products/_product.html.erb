@@ -23,11 +23,23 @@
   
   </div>
 
-
   <% if product.image.present? %>
   	<p><%= image_tag product.image.medium.url %></p>
   <% end %>
   <div id="desc">
     <p><%= product.description %></p>
   </div>
+</div>
+
+ <div id="addtocart">
+  <% if session[:items].include?(@product.id) then %>
+      <h4>This item is currently in your cart.</h4>
+  <% else %>      
+    <%= form_tag add_path %>
+    <div>
+      <%= label_tag 'qty', 'Quantity:' %>
+      <%= text_field_tag 'qty', value="1" %>
+      <%= button_tag 'Add to Cart', data: {@product.id => :id, @qty => :qty}, class: "btn btn-default btn-sm" %>
+    </div>      
+  <%end%>
 </div>

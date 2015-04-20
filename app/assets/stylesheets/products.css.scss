@@ -253,6 +253,15 @@ div.product {
   }
 }
 
+#addtocart {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px;
+  padding: 10px;
+  background-image: $metal-color;
+}
+
 #searchresult {
   text-align: center;
   margin: 20px;
