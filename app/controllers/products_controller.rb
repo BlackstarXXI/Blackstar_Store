@@ -24,29 +24,11 @@ class ProductsController < ApplicationController
   end
 
   def priceasc
-    @products = @products.sort {|p1,p2| p1.price <=> p2.price}
+    @products = Product.order(price: :asc ).all
   end
   
   def pricedesc
-    
-    category = session[:current_category].to_i
-    
-    if category == 0
-      @products = Product.order(price: :desc ).page(params[:page]).per(4)
-    end
-    
-    if category == -1 
-      @products = Product.where('inventory_status = "new"').order(price: :desc ).page(params[:page]).per(4)
-    end
-    
-    if category == -2
-      @products = Product.where('price_status = "onsale"').order(sale_price: :desc).page(params[:page]).per(4)
-    end
-    
-    if category > 0
-      @products = Product.where('category_id = ?', category).page(params[:page]).per(4)
-    end    
-    
+    @products = Product.order(price: :desc ).all
   end
   
   def nameasc
