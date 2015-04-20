@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
   def bycategory
     session[:current_category] = params[:id]
-    @products = Product.where('category_id = ?', params[:id]).page(params[:page]).per(4)
+    @products = Product.where('category_id = ?', params[:id]).page(params[:page]).all
   end
 
   def brandnew

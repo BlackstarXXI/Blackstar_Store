@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :category, only: [:index, :show ]
-  get 'by_category/:id', to: 'product#bycategory', as: 'by_category'
+  get 'by_category/:id', to: 'products#bycategory', as: 'by_category'
   get 'new_products', to: 'products#brandnew', as: 'new_products'
   get 'on_sale', to: 'products#onsale', as: 'on_sale'
   get 'search_results', to: 'products#search_results', as: 'search_results'
