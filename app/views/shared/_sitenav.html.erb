@@ -8,6 +8,13 @@
             <li><%= link_to "Manga", category_path(3) %></li>
         </ul>
     </li>
+    <li><a>Products</a>
+        <ul class="nav_sec_child">
+            <li><%= link_to "New", new_products_path %></li>
+            <li><%= link_to "On Sale", on_sale_path %></li>
+            <li><%= link_to "Price asc", by_price_asc_path %></li>
+        </ul>
+    </li>
     <li><%= link_to "About us", about_show_path  %></li>
     <li><%= link_to "Contact", contact_show_path %></li>
   </ul>

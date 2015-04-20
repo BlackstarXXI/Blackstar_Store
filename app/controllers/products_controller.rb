@@ -16,13 +16,11 @@ class ProductsController < ApplicationController
   end
 
   def brandnew
-    session[:current_category] = -1
-    @products = Product.where('inventory_status = "new"').page(params[:page]).per(4)
+    @products = Product.where('inventory_status = "new"').all
   end
 
-  def onsale
-    session[:current_category] = -2
-    @products = Product.where('price_status = "onsale"').page(params[:page]).per(4)
+  def on_sale
+    @products = Product.where('price_status = "onsale"').all
   end
 
   def priceasc
