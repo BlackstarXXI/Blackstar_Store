@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
     @products = Product.where('inventory_status = "new"').all
   end
 
-  def on_sale
+  def onsale
     @products = Product.where('price_status = "onsale"').all
   end
 
